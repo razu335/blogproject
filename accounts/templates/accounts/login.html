@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body>
+    <div class= "login-container">
+        <h2>ログイン</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">ログイン</button>
+        </form>
+        <p class="signup-link">
+            <p><a href="{% url 'accounts:password_reset' %}">パスワードを忘れた方はこちら</a></p>
+            <a href="{% url 'accounts:signup' %}">アカウントをお持ちでない方はこちらから登録</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+こんにちは、{{ user.get_full_name|default:user.email|default:"ユーザー" }} さん
+
+以下のリンクをクリックして、パスワードをリセットしてください：
+{{ protocol }}://{{ domain }}{% url 'accounts:password_reset_confirm' uidb64=uid token=token %}
+
+このリンクの有効期限は {{ expiry_time }} 時間です。
+もしこのメールに心当たりがない場合は、何もする必要はありません。

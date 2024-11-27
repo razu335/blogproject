@@ -1,0 +1,63 @@
+/* 投稿一覧全体のスタイル */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 各投稿のスタイル */
+.post-item {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+/* 投稿内容の横並びレイアウト */
+.post-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* 画像とテキストの間隔 */
+}
+
+/* 画像のスタイル */
+.post-image {
+    width: 150px; /* 横幅を固定 */
+    height: 150px; /* 高さを固定 */
+    background-size: cover; /* 枠内に収まるよう調整 */
+    background-position: center; /* 中心を基準に表示 */
+    background-repeat: no-repeat; /* 繰り返しを無効 */
+    border-radius: 8px; /* 角を少し丸める（任意） */
+}
+
+/* テキストのスタイル */
+.post-text {
+    flex: 1; /* テキスト部分が余ったスペースを埋める */
+    color: #333; /* ダークな文字色 */
+}
+
+.post-text h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+}
+
+.post-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ボタンのスタイル（新しい投稿用リンク） */
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
